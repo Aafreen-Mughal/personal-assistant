@@ -1,0 +1,236 @@
+/* Home.module.css */
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: center;
+}
+
+/* Header Styles */
+.header {
+  width: 100%;
+  padding: 1rem 3rem;
+  background: #ffffff00;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: rgb(106, 133, 255);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.headerRight {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.btns {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: rgb(83, 50, 124);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btns:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 6rem 3rem;
+  gap: 5rem;
+  max-width: 1600px;
+  margin: 2 auto;
+}
+
+
+.heroContent {
+  padding: 2rem;
+}
+
+
+.hero h1 {
+  padding-top: 300px;
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  color: #2d3436;
+  line-height: 1.2;
+}
+
+.hero p {
+
+  padding-top: 300px;
+  font-size: 1.2rem;
+  color: #000000;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+/* Features Grid */
+/* Features Grid */
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem 3rem;
+  max-width: 1400px;
+  margin: 0 auto 4rem;
+}
+
+.featureCard {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-left: 5px solid #5e35b1;
+}
+
+.featureCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.featureIcon {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  color: #5e35b1;
+}
+
+.featureCard h2 {
+  color: #2d3436;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.featureCard p {
+  color: #636e72;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  padding: 1rem 3rem;
+  background: #ffffff;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  
+}
+
+.footer p {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Chatbot Button */
+.chatbotBtn {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  background: #5e35b1;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 999;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.chatbotBtn:hover {
+  background: #7e57c2;
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .heroImage {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .headerRight {
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+  }
+}

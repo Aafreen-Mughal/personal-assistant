@@ -1,0 +1,236 @@
+/* Background Wrapper */
+.wrapper {
+  min-height: 100vh;
+  width: 100%;
+  background: #f8f9fa; /* Light gray background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header .logo {
+  color: #6a11cb; /* Purple logo */
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.header-right {
+  display: flex;
+  gap: 15px;
+}
+
+.btns {
+  padding: 10px 20px;
+  background-color: #6a11cb; /* Purple button */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+.show_pass_button{
+  padding: 1px 20px;
+  background-color: #76608f46; /* Purple button */
+  color: rgba(138, 125, 125, 0.147);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btns:hover {
+  background-color: #4d0b9a; /* Darker purple */
+  transform: translateY(-2px);
+}
+
+/* Add margin-top to prevent header overlap with content */
+body {
+  margin-top: 70px;
+}
+
+.exploreBtn {
+  background: linear-gradient(to right, #6a11cb, #8a2be2); /* Purple gradient */
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(106, 17, 203, 0.3);
+}
+
+.exploreBtn:hover {
+  background: #8a2be2;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(106, 17, 203, 0.4);
+}
+
+/* Form Styling */
+.form {
+  background: white;
+  margin-top: 40px;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  width: 90%;
+  max-width: 450px;
+  color: #333;
+  text-align: center;
+  animation: fadeInUp 0.8s ease;
+  border: 1px solid rgba(106, 17, 203, 0.1);
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.title {
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: #6a11cb; /* Purple title */
+  font-weight: 700;
+}
+
+/* Input Groups */
+.inputGroup {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 20px 14px 45px;
+  border-radius: 10px;
+  background: #f8f9fa;
+  color: #333;
+  border: 2px solid #e9ecef;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #6a11cb;
+  box-shadow: 0 0 0 3px rgba(106, 17, 203, 0.2);
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #6a11cb;
+}
+
+.toggle {
+  position: absolute;
+  top: -10%;
+  right: 20px;
+  color: hsla(269, 76%, 56%, 0.87);
+  cursor: pointer;
+}
+/* Error Text */
+.error {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #dc3545;
+  text-align: left;
+  padding-left: 15px;
+}
+
+/* Buttons */
+.loginBtn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, #6a11cb, #8a2be2);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  box-shadow: 0 4px 15px rgba(106, 17, 203, 0.3);
+}
+
+.loginBtn:hover {
+  background: #8a2be2;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(106, 17, 203, 0.4);
+}
+
+.terms {
+  font-size: 14px;
+  margin-top: 20px;
+  color: #6c757d;
+}
+
+.createAccountBtn {
+  display: block;
+  margin-top: 20px;
+  padding: 12px;
+  background: white;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #6a11cb;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid #6a11cb;
+}
+
+.createAccountBtn:hover {
+  background: #f3e9ff;
+  transform: translateY(-2px);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .header {
+    padding: 12px 20px;
+  }
+  
+  .form {
+    padding: 30px;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form {
+    padding: 25px 20px;
+    margin-top: 25px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+  
+  .input {
+    padding: 12px 20px 12px 40px;
+  }
+}
